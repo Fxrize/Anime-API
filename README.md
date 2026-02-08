@@ -14,7 +14,7 @@ Anime-API provides structured JSON responses for:
 - Detail information
 - Streaming sources
 
-Designed to be lightweight, fast, and easy to integrate with any frontend or mobile app.
+Designed to be lightweight, fast, and easy to integrate with any frontend or mobile applications.
 
 ---
 
@@ -23,56 +23,67 @@ Designed to be lightweight, fast, and easy to integrate with any frontend or mob
 - Node.js
 - Express
 - Axios
-- Cheerio / Scraping tools
+- Cheerio (Web scraping)
 
 ---
 
 ## Installation
 
-Clone repository:
-
+### Clone repository
 ```bash
 git clone https://github.com/Fxrize/Anime-API.git
+cd Anime-API
 ```
 
-Go to project folder:
-
-cd Anime-API
-
-
-Install dependencies:
-
+### Install dependencies
+```bash
 npm install
+```
 
-
-Run server:
-
+### Run server
+```bash
 npm start
+```
 
-
-Development mode (auto-reload):
-
+### Development mode (auto reload)
+```bash
 npm run dev
+```
 
-API Endpoints
+---
+
+## API Endpoints
 
 Base URL:
-
+```
 http://localhost:3000
+```
 
-Get Anime List
+### Get anime list
+```http
 GET /anime
+```
 
-Search Anime
+### Search anime
+```http
 GET /search?query=naruto
+```
 
-Get Anime Detail
+### Get anime detail
+```http
 GET /anime/:id
+```
 
-Get Streaming Sources
+### Get streaming sources
+```http
 GET /anime/:id/stream
+```
 
-Example Response
+---
+
+## Example Response
+
+```json
 {
   "status": true,
   "data": {
@@ -81,36 +92,48 @@ Example Response
     "genre": ["Action", "Adventure"]
   }
 }
+```
 
-Project Structure
+---
+
+## Project Structure
+
+```
 src/
  ├─ routes/
  ├─ controllers/
  ├─ extractors/
  ├─ utils/
  └─ app.js
+```
 
-Requirements
+---
 
-Node.js 18+
+## Requirements
 
-npm or yarn
+- Node.js 18+
+- npm or yarn
+- Internet connection (required for scraping)
 
-Internet connection (for scraping sources)
+---
 
-Notes
+## Notes
 
-This project is not affiliated with any official anime provider.
+- Not affiliated with any official anime provider
+- Data is collected from publicly available sources
+- For educational and personal use only
 
-Data is collected from publicly available sources.
+---
 
-For educational and personal use only.
+## Contributing
 
-Contributing
+Pull requests are welcome.  
+Please open an issue first for major changes.
 
-Pull requests are welcome.
-For major changes, please open an issue first to discuss what you would like to change.
+---
 
-License
+## License
 
 MIT License
+
+---
